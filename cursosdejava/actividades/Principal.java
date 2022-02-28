@@ -25,5 +25,6 @@ public class Principal {
         
         troco = trocos.calcularTrocos();
         System.out.println("O Troco que o cliente deve receber e: " + troco);
+        in.close();
     }
 }

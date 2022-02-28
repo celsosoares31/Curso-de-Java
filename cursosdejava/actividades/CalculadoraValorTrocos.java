@@ -12,20 +12,16 @@ import java.util.Scanner;
  */
 public class CalculadoraValorTrocos {
         private Double valorPago, valorPagar, resultado;
-         
+        
+        public void setValorPago(Double valor){
+            this.valorPago = valor;
+        }
+        public void setValorPagar(Double valor){
+            this.valorPagar = valor;
+        }
         public Double calcularTrocos(){
-            Scanner in = new Scanner(System.in);
+            this.resultado = this.valorPago - this.valorPagar;
             
-            System.out.println("Digite o valor a pagar: ");
-            this.valorPagar = in.nextDouble();
-            System.out.println("Digite o valor passado pelo cliente ");
-            this.valorPago = in.nextDouble();
-           
-            resultado = valorPago - valorPagar;
-            
-            this.resultado = valorPago - valorPagar;
-            
-            in.close();
             return resultado;
         }
 }

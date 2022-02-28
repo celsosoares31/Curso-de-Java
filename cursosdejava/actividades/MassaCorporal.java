@@ -8,6 +8,12 @@ package com.cursosdejava.actividades;
  *
  * @author celso
  */
-public class CalculadoraDeMassaCorporal {
+public class MassaCorporal {
+   private double IMC;
    
+   public Double calculaMassaCorporal(Double pesoA, Double alturaA){
+       this.IMC = pesoA/(alturaA*alturaA);
+       
+       return IMC;
+   }
 }

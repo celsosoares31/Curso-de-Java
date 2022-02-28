@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author celso
  */
-public class CalculadoraValorTrocos {
+public class TrocosDeVenda {
         private Double valorPago, valorPagar, resultado;
         
         public void setValorPago(Double valor){

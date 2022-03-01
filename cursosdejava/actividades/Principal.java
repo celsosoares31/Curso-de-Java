@@ -51,20 +51,14 @@ public class Principal {
         
         TipoTexto nomeCompleto = new TipoTexto(nomeP, sobreNomeP);
         System.out.println("Ola " + nomeCompleto.getNomeCompleto());
-       
+      
         System.out.println("\n------------------- Verifica se um aluno foi aprovado ou nao----------------------------\n");
-        System.out.println("Digite o nota do aluno ");
-        notaP = in.nextDouble();
         
         PassouChumbou STATUS = new PassouChumbou();
         
-        if(STATUS.Status(notaP)){
-            System.out.println("O aluno foi Aprovado");
-        }else{
-            System.out.println("Aluno reprovado");
-        }
+        STATUS.SituacaoDoAluno();
         
-        
+       
         System.out.println("\n------------------- Calcula o desconto ----------------------------\n");
         CalculaDesconto valorTotal = new CalculaDesconto();
         
@@ -73,12 +67,25 @@ public class Principal {
         System.out.println("\n------------------- Calculadora Simples----------------------------\n");
         CalculdadoraSimples calculadoraSimples = new CalculdadoraSimples();
         
-        calculadoraSimples.calculdadoraSimples();*/
+        calculadoraSimples.calculdadoraSimples();
         
         
         System.out.println("\n------------------- Calculadora de desconto de frete----------------------------\n");
         DescontoDeFrete descFrete = new DescontoDeFrete();
         
         descFrete.calculaDesconto();
+        
+        System.out.println("\n------------------- Interacao Usando O for----------------------------\n");
+        DivisivelPorTres forInteracao = new DivisivelPorTres();
+        
+        
+        forInteracao.divisor();
+        
+        */
+        
+        System.out.println("\n------------------- Encontrar o maior facturamanto----------------------------\n");
+        MaiorFacturamentoSemanal facturamento = new MaiorFacturamentoSemanal();
+        
+        facturamento.EncontraMaiorFacturamento();
     }
 }

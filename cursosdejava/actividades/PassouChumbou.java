@@ -10,9 +10,10 @@ package com.cursosdejava.actividades;
  */
 public class PassouChumbou {
     Boolean resultado;
+    static final Integer NOTA_MINIMA_PARA_APROVACAO_DO_ALUNO = 70;
     
     public Boolean Status(Double nota){
-        this.resultado = nota > 70;
+        this.resultado = nota > NOTA_MINIMA_PARA_APROVACAO_DO_ALUNO;
         
         return resultado;
     }

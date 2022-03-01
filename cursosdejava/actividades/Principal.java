@@ -63,12 +63,17 @@ public class Principal {
         }else{
             System.out.println("Aluno reprovado");
         }
-        */
+        
         
         System.out.println("\n------------------- Calcula o desconto ----------------------------\n");
         CalculaDesconto valorTotal = new CalculaDesconto();
         
         valorTotal.desconto();
+        */
         
+        System.out.println("\n------------------- Calculadora Simples----------------------------\n");
+        CalculdadoraSimples calculadoraSimples = new CalculdadoraSimples();
+        
+        calculadoraSimples.calculdadoraSimples();
     }
 }

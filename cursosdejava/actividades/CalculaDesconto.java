@@ -11,13 +11,15 @@ import java.util.Scanner;
  * @author celso
  */
 public class CalculaDesconto {
-    Integer qtdProduto;
-    Double valorProduto, descontoP = 0.0, valorPagar, desconto, subTotal, total;
+    Integer qtdProduto, descontoP = 0;
+    Double valorProduto, valorPagar, desconto, subTotal, total;
     Boolean qtdDesejada;
     
+    static final Integer PERCENTUAL_DE_DESCONTO = 10;
     
     public void desconto(){
         Scanner entrada = new Scanner(System.in);
+        
         
         System.out.println("Digite o valor do produto:");
         valorProduto = entrada.nextDouble();
@@ -28,7 +30,7 @@ public class CalculaDesconto {
         qtdDesejada = qtdProduto > 10;
         
         if(qtdDesejada){
-            descontoP = 10.0;
+            descontoP = PERCENTUAL_DE_DESCONTO;
         }
         
         desconto = (subTotal*descontoP)/100;

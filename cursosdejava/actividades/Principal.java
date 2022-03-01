@@ -13,12 +13,12 @@ import java.util.Scanner;
  */
 public class Principal {
     public static void main(String[] args){
-        Double troco, pesoP, alturaP, numP, notaP;
+        /*Double troco, pesoP, alturaP, numP, notaP;
         String nomeP, sobreNomeP;
         //A linha abaixo instancia o objecto da classe CalculadoraValorTrocos
         //TrocosDeVenda trocos = new TrocosDeVenda();
         Scanner in = new Scanner(System.in);
-        /*System.out.println("\n------------------- Calculadora de Trocos----------------------------\n");
+        System.out.println("\n------------------- Calculadora de Trocos----------------------------\n");
         System.out.println("Digite o valor a pagar: ");
         trocos.setValorPagar(in.nextDouble());
         System.out.println("Digite o valor passado pelo cliente ");
@@ -69,11 +69,16 @@ public class Principal {
         CalculaDesconto valorTotal = new CalculaDesconto();
         
         valorTotal.desconto();
-        */
         
         System.out.println("\n------------------- Calculadora Simples----------------------------\n");
         CalculdadoraSimples calculadoraSimples = new CalculdadoraSimples();
         
-        calculadoraSimples.calculdadoraSimples();
+        calculadoraSimples.calculdadoraSimples();*/
+        
+        
+        System.out.println("\n------------------- Calculadora de desconto de frete----------------------------\n");
+        DescontoDeFrete descFrete = new DescontoDeFrete();
+        
+        descFrete.calculaDesconto();
     }
 }

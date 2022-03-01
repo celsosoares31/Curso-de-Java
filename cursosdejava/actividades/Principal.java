@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Principal {
     public static void main(String[] args){
-        Double troco, pesoP, alturaP, numP;
+        Double troco, pesoP, alturaP, numP, notaP;
         String nomeP, sobreNomeP;
         //A linha abaixo instancia o objecto da classe CalculadoraValorTrocos
         //TrocosDeVenda trocos = new TrocosDeVenda();
@@ -42,7 +42,7 @@ public class Principal {
         
         QuadradoDeNumero quadradoNum = new QuadradoDeNumero();
         System.out.println("O Quadrado de " + numP + " e: " + quadradoNum.SQRT(numP));
-        */
+       
         System.out.println("\n------------------- IMPRESSAO DO NOME COMPLETO ----------------------------\n");
         System.out.println("Digite o teu nome: ");
         nomeP = in.nextLine();
@@ -50,9 +50,25 @@ public class Principal {
         sobreNomeP = in.nextLine();
         
         TipoTexto nomeCompleto = new TipoTexto(nomeP, sobreNomeP);
-        
         System.out.println("Ola " + nomeCompleto.getNomeCompleto());
+       
+        System.out.println("\n------------------- Verifica se um aluno foi aprovado ou nao----------------------------\n");
+        System.out.println("Digite o nota do aluno ");
+        notaP = in.nextDouble();
         
-        in.close();
+        PassouChumbou STATUS = new PassouChumbou();
+        
+        if(STATUS.Status(notaP)){
+            System.out.println("O aluno foi Aprovado");
+        }else{
+            System.out.println("Aluno reprovado");
+        }
+        */
+        
+        System.out.println("\n------------------- Calcula o desconto ----------------------------\n");
+        CalculaDesconto valorTotal = new CalculaDesconto();
+        
+        valorTotal.desconto();
+        
     }
 }

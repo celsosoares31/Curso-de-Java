@@ -4,9 +4,6 @@
  */
 package com.cursosdejava.actividades;
 
-import com.cursosdejava.aulas.tiposdedados.TipoTexto;
-import java.util.Scanner;
-
 /**
  *
  * @author celso
@@ -81,11 +78,56 @@ public class Principal {
         
         forInteracao.divisor();
         
-        */
-        
         System.out.println("\n------------------- Encontrar o maior facturamanto----------------------------\n");
         MaiorFacturamentoSemanal facturamento = new MaiorFacturamentoSemanal();
         
-        facturamento.EncontraMaiorFacturamento();
+        facturamento.EncontraMaiorFacturamento(1,1);
+      
+        
+       System.out.println("\n------------------ Verifica a quantidade de estoque ----------------------------\n");
+       Produto produto1 = new Produto();
+       
+       produto1.nome = "laranja";
+       produto1.quantidade = 10;
+       System.out.println("SItuacao do Estoque: " + produto1.reporStoque());
+       
+       */
+       System.out.println("\n------------------ Mostra Informacoes do pedido ----------------------------\n");
+       Pedido pedido = new Pedido();
+       Pedido pedido1 = new Pedido();
+       Pedido pedido2 = new Pedido();
+       Pedido pedido3 = new Pedido();
+       
+      pedido.setDesconto(20.0);
+      pedido.setSubtTotal(80.0);
+      
+      pedido1.setDesconto(15.0);
+      pedido1.setSubtTotal(89.0);
+      
+     
+      pedido2.setDesconto(29.0);
+      pedido2.setSubtTotal(180.0);
+    
+      
+      pedido3.setDesconto(190.0);
+      pedido3.setSubtTotal(8990.0);
+     
+      
+       System.out.println("\nO Codigo e: " + pedido.getID()+ "\nO Desconto e igual a : " + pedido.getDesconto());
+       System.out.println("O subTotal e : " + pedido.getSubtTotal());
+       System.out.println("O Total: " + pedido.getTotal());
+      
+       System.out.println("\nO Codigo e: " + pedido1.getID()+ "\nO Desconto e igual a : " + pedido1.getDesconto());
+        System.out.println("O subTotal e : " + pedido1.getSubtTotal());
+        System.out.println("O Total: " + pedido1.getTotal());
+        
+        System.out.println("\nO Codigo e: " + pedido2.getID()+ "\nO Desconto e igual a : " + pedido2.getDesconto());
+       System.out.println("O subTotal e : " + pedido2.getSubtTotal());
+       System.out.println("O Total: " + pedido2.getTotal());
+      
+       System.out.println("\nO Codigo e: " + pedido3.getID()+ "\nO Desconto e igual a : " + pedido3.getDesconto());
+        System.out.println("O subTotal e : " + pedido3.getSubtTotal());
+        System.out.println("O Total: " + pedido3.getTotal());
+        
     }
 }

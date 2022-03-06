@@ -28,8 +28,10 @@ public class MaiorFacturamentoSemanal {
     Double[] semanaQuatro = new Double[]{ 1100.0, 1600.0, 1850.0, 2100.0, 1220.0, 998.0, 0.0 };
 
     Double[][] mes = new Double[][] { semanaUm, semanaDois, semanaTres, semanaQuatro };
-    Double maiorFacturamento=0.0, facturamentoTotal = 0.0;
+    Double maiorFacturamento=0.0, facturamentoTotal;
     int semanaComMaiorFacturamento;
+    
+    
     
     private String nomeDaSemana(int num){
         String resp = null;
@@ -51,8 +53,8 @@ public class MaiorFacturamentoSemanal {
         return resp;
     }
     
-    public void EncontraMaiorFacturamento(){
-        for (int i = 0; i < mes.length; i++) {
+    public void EncontraMaiorFacturamento(int num, int i){
+        /*for (int i = 0; i < mes.length; i++) {
             facturamentoTotal = 0.0;
             Double[] semana = mes[i];
             
@@ -67,6 +69,12 @@ public class MaiorFacturamentoSemanal {
         }
         
         System.out.println("A Semana com maior facturamento é a semana: " + this.nomeDaSemana(semanaComMaiorFacturamento));
-        System.out.println("E o respectivo facturamento foi de: " + maiorFacturamento);
+        System.out.println("E o respectivo facturamento foi de: " + maiorFacturamento);*/
+        System.out.println(". " + num + " x " + i + " = " + num * i);
+        
+        ++i;
+        if(i <= 10){
+           EncontraMaiorFacturamento(num, i); 
+        }
     }
 }
